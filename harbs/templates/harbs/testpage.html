@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test page</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'harbs/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'harbs/css/harbs.css' %}">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'harbs/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'harbs/js/testpage.js' %}"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div id='result'>{{ coefs }}</div>
+		</div>
+	</div>
+</body>
+</html>

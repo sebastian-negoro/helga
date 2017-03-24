@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Helga</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'harbs/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'harbs/css/harbs.css' %}">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="{% static 'harbs/js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'harbs/js/harbs.js' %}"></script>
+</head>
+<body>
+	{% if hockey_matches %}
+		<div class="container">
+			{% for hockey_match in hockey_matches %}
+				<div class="hockey_match row" id="hockey_{{ hockey_match.match_id }}">
+					<div class="hockey_teams">
+						<p>{{ hockey_match.first_team }} - {{ hockey_match.second_team }}</p>
+						<button type="button" id="{{ hockey_match.match_id }}" data-marathonlink="{{ hockey_match.marathon_link }}" class="btn btn-default connect_match">Подключиться</button>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	{% else %}
+		<p>Текущих зарегистрированных матчей нет</p>
+	{% endif %}
+
+	{% if coefs %}
+		<div class="container">
+			<div class="row">
+				<p>{{coefs}}</p>
+			</div>
+		</div>
+	{% else %}
+		<p>Нэт билет</p>
+	{% endif %}
+
+	<div class="container">
+		<div class="row">
+			<button type="button" class="btn btn-default" id="generate_page">Создать страницу</button>
+			<button type="button" id="refresh_matchlist" class="btn btn-default">Обновить список матчей</button>
+		</div>
+	</div>
+
+</body>
+</html>

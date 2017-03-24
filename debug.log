@@ -1,0 +1,6 @@
+[0208/213703.620:ERROR:process_reader_win.cc(114)] NtOpenThread: {Отказ доступа} Процесс запросил доступ к объекту, однако права доступа не предоставлены.  (0xc0000022)
+[0208/213703.621:ERROR:exception_snapshot_win.cc(87)] thread ID 6804 not found in process
+[0208/213703.620:ERROR:process_reader_win.cc(114)] NtOpenThread: {Отказ доступа} Процесс запросил доступ к объекту, однако права доступа не предоставлены.  (0xc0000022)
+[0208/213703.621:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
+[0208/213703.621:ERROR:exception_snapshot_win.cc(87)] thread ID 3060 not found in process
+[0208/213703.621:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::Initialize failed
